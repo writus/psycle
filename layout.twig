@@ -6,6 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     {{ head }}
+    <link rel="stylesheet" href="{{ themepath }}css/simplegrid.css">
     <link rel="stylesheet" href="{{ themepath }}css/style.css">
     <!--[if lt IE 9]>
     <link rel="stylesheet" type="text/css" href="xp.css" />
@@ -14,24 +15,40 @@
 </head>
 <body>
 
-<header>
-    <h1><a href="/">{{ blog.name }}</a></h1>
-    <h2><span>{{ blog.description}}</span></h2>
+<header class="">
+    <div class="grid grid-pad">
+        <div class="col-1-1">
+            <h1>
+            {% if blog.ts.logo.url %}
+            <a href="/"><img src="{{  blog.ts.logo.url }}" alt="{{ blog.name }}"></a>
+            {% else%}
+            <a href="/">{{ blog.name }}</a>
+            {% endif%}
+            </h1>
+            <h2><span>{{ blog.description}}</span></h2>
+        </div>
+    </div>
+   
 </header>
   
-<div role="main">
-
+<div role="main" class="posts">
+    
     {% block content %}{% endblock %}
     
 </div>
+    
 <footer>
-    <nav>
+    <div class="grid grid-pad">
+    <nav class="col-1-1">
         <ul>
             <li><a href="/">home</a></li>
             <li><a href="/about">about</a></li>
+            <li><a href="/archive">archive</a></li>
             <li><a href="/feed">feed</a></li>
         </ul>
     </nav>
+    </div>
+    
 </footer>
 
 </body>

@@ -1,0 +1,17 @@
+{% extends 'psycle.layout.twig' %}
+
+{% block content %}
+<div class="posts grid grid-pad">
+    <div class="col-1-1 posts">
+    {% for post in posts %}
+        <ul class="archive">
+            <li class="posts grid grid-pad">
+                <span class="archive-date col-3-12">{{ post.date|date('j M Y') }}</span>
+                <span class="archive-title col-9-12"><a href="/{{ post.url }}">{{ post.title }}</a></span>
+            </li>
+
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

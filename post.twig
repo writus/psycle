@@ -2,18 +2,8 @@
 
 {% block content %}
 <div class="posts">
-
-
-        <article>
-            <div class="post">
-                <h2><a href="/{{ post.url }}">{{ post.title }}</a></h2>
-                <div class="content">
-                    {{ post.body }}
-                </div>  
-                <div class="article_footer">
-                    <span class="tags">{{ post.tags|join(', ') }}</span>
-                </div>
-            </div>
+   <article class="grid grid-pad">
+        <div class="col-3-12">
             <ul class="meta">
                 <li class="date"><span class="d">{{ post.date|date('d') }}</span> <span class="m">{{ post.date|date('M') }}</span> <span class="y">{{ post.date|date('Y') }}</span></li>
                 {% for category in post.categories %}
@@ -22,7 +12,19 @@
                 </li>
                 {% endfor %}
             </ul>
+        </div>
+        <div class="col-9-12 post">
+            <h2><a href="/{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="content">
+                {{ post.body }}
+            </div>  
+            <div class="article_footer">
+                <span class="tags">{{ post.tags|join(', ') }}</span>
+            </div>
+        </div>
 
-        </article>
+    </article>
+
+      
 </div>
 {% endblock %}

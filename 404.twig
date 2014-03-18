@@ -4,8 +4,9 @@
 <div class="posts">
 
 
-        <article>
-        <div class="post">
+    <article class="grid grid-pad">
+        <div class="col-3-12">&nbsp;</div>
+        <div class="col-9-12 post">
             <h2>{{ blog.ts.notfound_title|default('404 not found') }}</h2>
             <div class="content">
                 {{ blog.ts.notfound_message|default('Sorry, this page was not found') }}
@@ -13,7 +14,6 @@
                 <a href="/">Return home</a>
             </div>  
         </div>
-        
 
     </article>
 </div>

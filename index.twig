@@ -1,22 +1,31 @@
 {% extends 'psycle.layout.twig' %}
 
 {% block content %}
-<div class="posts">
-    
-    <div class="pagination">
+
+    <div class="grid grid-pad"><div class="pagination col-1-1">
         {% if prevPage %}
         <a href="/all/{{ prevPage }}">newer</a>
         {% endif %}
         {% if nextPage %}
         <a href="/all/{{ nextPage }}">older</a>
         {% endif %}
-    </div>
-   
-    {{ page_title ? '<h1>' ~ page_title ~ '</h1>' }}
-    <hr style="border-color:#eee">
+    
+        {{ page_title ? '<h1>' ~ page_title ~ '</h1>' }}
+        <hr style="border-color:#eee">
+    </div></div>
     {% for post in posts %}
-        <article>
-            <div class="post">
+        <article class="grid grid-pad">
+            <div class="col-3-12">
+                <ul class="meta">
+                    <li class="date"><span class="d">{{ post.date|date('d') }}</span> <span class="m">{{ post.date|date('M') }}</span> <span class="y">{{ post.date|date('Y') }}</span></li>
+                    {% for category in post.categories %}
+                    <li class="category">
+                        <a href="/{{ category.url }}">{{ category.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-9-12 post">
                 <h2><a href="/{{ post.url }}">{{ post.title }}</a></h2>
                 <div class="content">
                     {{ post.body }}
@@ -25,25 +34,24 @@
                     <span class="tags">{{ post.tags|join(', ') }}</span>
                 </div>
             </div>
-            <ul class="meta">
-                <li class="date"><span class="d">{{ post.date|date('d') }}</span> <span class="m">{{ post.date|date('M') }}</span> <span class="y">{{ post.date|date('Y') }}</span></li>
-                {% for category in post.categories %}
-                <li class="category">
-                    <a href="/{{ category.url }}">{{ category.name }}</a>
-                </li>
-                {% endfor %}
-            </ul>
 
         </article>
-        <hr style="border-color:#eee">
+    <div class="grid grid-pad">
+        <div class="pagination col-1-1">
+            <hr style="border-color:#eee">
+        </div>
+    </div>
+        
     {% endfor %}
-    <div class="pagination">
+    <div class="grid grid-pad"><div class="pagination col-1-1">
         {% if prevPage %}
         <a href="/all/{{ prevPage }}">newer</a>
         {% endif %}
         {% if nextPage %}
         <a href="/all/{{ nextPage }}">older</a>
         {% endif %}
-    </div>
-</div>
+    
+        {{ page_title ? '<h1>' ~ page_title ~ '</h1>' }}
+    </div></div>
+
 {% endblock %}

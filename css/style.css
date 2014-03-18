@@ -1,4 +1,12 @@
 /* =============================================================================
+   Psycle Theme
+   website: psycle.gr
+   author: Alexander Lingris
+   author_website: alexlingris.com
+   ========================================================================== */
+
+
+/* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
 
@@ -93,10 +101,10 @@ a:hover{color:#609FAB;}
 
 body{font-family: 'Ubuntu', serif;}
 body > header {
-  margin: 0 auto 20px;
+  margin: 0 auto 0px;
   position: relative;
   text-align: left;
-  width: 960px;
+  max-width: 1000px;
 }
 body > header h1{}
 body > header h1 a {
@@ -173,7 +181,7 @@ body > header nav ul li a:hover{}
 /* =============================================================================
    Footer
    ========================================================================== */
-body > footer{margin: 0 auto;width:960px;text-align:left}
+body > footer{margin: 0 auto;max-width:1000px;text-align:left}
 body > footer nav {
   border-top: 5px solid #6EC8DA;
   padding: 30px 0;
@@ -196,14 +204,12 @@ body > footer nav ul li a{}
 div[role="main"] {
   margin: 0 auto;
   padding: 10px 0;
-  width: 960px;
+  max-width: 1000px;
 }
 .posts .post {
-  padding: 0 0 0 40px;
 }
 .posts article {
   margin: 0 0 50px;
-  padding: 0 0 0 200px;
   position: relative;
 }
 .posts article h2 {
@@ -215,12 +221,7 @@ div[role="main"] {
   line-height: 21px;
 }
 .posts article .meta {
-  left: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  width:180px;
+  padding:0px;
 }
 .posts article .meta li {
   list-style: none outside none;
@@ -292,25 +293,34 @@ padding-top:4px;
   position: absolute;
   right: 0;
 }
-/* =============================================================================
-   Media Queries
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+
+ul.archive  {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+ul.archive li{}
+ul.archive li span.archive-date {
+  background: none repeat scroll 0 0 #FFF787;
+  color: #333333;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  padding: 5px 1px;
+  margin:5px 0;
+  text-align: center;
+  width: 100px;
+}
+ul.archive li span.archive-title{}
+ul.archive li span.archive-title a {
+  color: #444444;
+  font-size: 20px;
+   padding: 10px 0;
+  margin: 0 0 0 23px;
 }
 
-/* =============================================================================
-   Non-Semantic Helper Classes
-   ========================================================================== */
 
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
-.ir br { display: none; }
-.hidden { display: none !important; visibility: hidden; }
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-.invisible { visibility: hidden; }
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-
+.grid-pad {
+  padding-top: 0px;
+}
