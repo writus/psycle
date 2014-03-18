@@ -1,0 +1,316 @@
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+
+
+/*
+font-family: 'Average', serif;
+font-family: 'Gudea', sans-serif;
+font-family: 'Fugaz One', cursive;
+font-family: 'Buenard', serif;
+font-family: 'Ruluko', sans-serif;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Unna', serif;
+
+colors: #6EC8DA; blue
+colors: #FFFF33; yellow
+colors: #750D92; purple
+
+*/
+a{text-decoration:none; color: #34A8BF;}
+a:hover{color:#609FAB;}
+
+body{font-family: 'Ubuntu', serif;}
+body > header {
+  margin: 0 auto 20px;
+  position: relative;
+  text-align: left;
+  width: 960px;
+}
+body > header h1{}
+body > header h1 a {
+  color: #444444;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 12px;
+  text-transform: lowercase;
+}
+body > header h2 {
+  color: #444;
+  background:#6EC8DA;
+  text-align: center;
+}
+body > header h2 span {
+  background: none repeat scroll 0 0 #FFFFFF;
+  display: inline-block;
+  padding: 0 40px;
+}
+body > header nav{overflow:auto; text-align: right;}
+body > header nav ul{}
+body > header nav ul li{}
+body > header nav ul li a {
+  float: left;
+  margin: 0 20px 0 0;
+}
+body > header nav ul li a.active{}
+body > header nav ul li a:hover{}
+/* =============================================================================
+   Collection
+   ========================================================================== */
+
+.collection {
+  margin: 30px auto 0;
+  padding: 10px 0;
+  width: 986px;
+}
+.collection ul {
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.collection ul li {
+  float: left;
+  list-style: none outside none;
+  margin: 0 13px;
+  position: relative;
+  width: 220px;
+}
+.collection ul li img {
+  
+}
+.collection ul li h3 {
+  background: none repeat scroll 0 0 #F1F1F1;
+  color: #333333;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 17px;
+  margin: 0;
+  padding: 4px 3px;
+  text-align: center;
+  width: 214px;
+}
+
+.collection .more {
+ 
+  display: block;
+  margin: 10px;
+  padding: 7px;
+  text-align: right;
+}
+
+/* =============================================================================
+   Footer
+   ========================================================================== */
+body > footer{margin: 0 auto;width:960px;text-align:left}
+body > footer nav {
+  border-top: 5px solid #6EC8DA;
+  padding: 30px 0;
+}
+body > footer nav ul {
+
+  text-align: center;
+}
+body > footer nav ul li {
+  display: inline;
+  font-size: 20px;
+  margin: 0 10px;
+}
+body > footer nav ul li a{}
+
+
+/* =============================================================================
+   Article
+   ========================================================================== */
+div[role="main"] {
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 960px;
+}
+.posts .post {
+  padding: 0 0 0 40px;
+}
+.posts article {
+  margin: 0 0 50px;
+  padding: 0 0 0 200px;
+  position: relative;
+}
+.posts article h2 {
+  color: #444444;
+}
+.posts article .content {
+  color: #333333;
+  font-size: 15px;
+  line-height: 21px;
+}
+.posts article .meta {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width:180px;
+}
+.posts article .meta li {
+  list-style: none outside none;
+}
+.posts article .meta .date {
+  
+  color: #6EC8DA;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 6px;
+  text-shadow: 2px 1px 1px #FFFFFF;
+}
+
+.posts article .meta .date .d {
+  font-size: 36px;
+  text-align: center;
+}
+.posts article .meta .date .m{}
+.posts article .meta .date .y{}
+.posts article .meta .category {
+  background: none repeat scroll 0 0 #FFF787;
+  color: #333333;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  padding: 5px 6px;
+}
+.posts article .meta .category a{
+  color:#333;
+}
+.posts article blockquote {
+  background: url("../img/icon-quote.gif") no-repeat scroll 0 0 transparent;
+  font-style: italic;
+  margin: 0 0 20px;
+  padding: 0 0 0 75px;
+  min-height: 46px;
+}
+
+.posts article blockquote p{
+padding-top:4px;
+}
+
+.posts article .tags {
+  color: #666666;
+  font-size: 13px;
+}
+.posts article .tags a{}
+
+#page_messages {
+  background: none repeat scroll 0 0 #CCCCCC;
+  padding: 2px 10px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 57px;
+}
+
+.pagination {
+ 
+}
+.pagination a {
+  color: #666666;
+  font-size: 17px;
+  margin: 0 20px 0 0;
+}
+.article_footer{position: relative;}
+.leave_comment {
+  font-size: 13px;
+  position: absolute;
+  right: 0;
+}
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
