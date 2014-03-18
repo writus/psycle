@@ -1,0 +1,18 @@
+logo:
+    label: Logo image
+    type: file
+    name: logo
+    width: 400
+    height: 100
+    description: For better results use an image 400x100
+notfound_title:
+    label: Not found page title
+    type: text
+    name: notfound_title
+    default: 404 not found
+notfound_message:
+    label: Not found page message
+    type: text
+    name: notfound_message   
+    default: Sorry, this page was not found
+
